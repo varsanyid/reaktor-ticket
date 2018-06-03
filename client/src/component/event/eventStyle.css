@@ -1,0 +1,21 @@
+
+.eventContainer {
+    margin-bottom:5%;
+}
+.event {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    height:250px;
+    background-color: #BDE4A7;
+    align-items: center;
+    border-radius: 50px 50px 0px 0px;
+    border: 1px solid grey;
+    font-weight: bold;
+}
+.eventContainer ul {
+    width:100%;
+    grid-row: 2;
+    padding: 0;
+    height: 50px;
+}

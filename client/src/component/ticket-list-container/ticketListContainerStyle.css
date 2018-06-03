@@ -1,0 +1,11 @@
+.ticketContainer div {
+    float: left;
+    width:48%;
+    margin: 0 auto;
+}
+.ticketContainer div:first-child {
+    border-right: 1px black;
+}
+.ticketContainer div div {
+    width: 33%;
+}

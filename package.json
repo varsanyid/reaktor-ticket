@@ -1,0 +1,35 @@
+{
+  "name": "reaktor-ticket",
+  "version": "1.0.0",
+  "description": "Ticket seller application server-side",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/varsanyid/reaktor-ticket.git"
+  },
+  "keywords": [
+    "nodejs",
+    "workshop",
+    "rest"
+  ],
+  "author": "Daniel Varsanyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varsanyid/reaktor-ticket/issues"
+  },
+  "homepage": "https://github.com/varsanyid/reaktor-ticket#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
