@@ -16,12 +16,10 @@ class Event extends React.Component {
         const event = this.props.event
         const isTicketVisible = this.state.isTicketVisible
         return(
-             <div className="eventContainer">
-                <div className="event" onClick={this.onClick}>
-                    <div className="eventName">{event.name}</div>
-                    <div className="eventLocation">{event.location}</div>
-                    <div className="eventType">{event.type}</div>
-                </div>
+             <div className="event-container" onClick={this.onClick} >
+                <div className="event-name">{event.name}</div>
+                <div className="event-location">{event.location}</div>
+                <div className="event-type">{event.type}</div>
                 { isTicketVisible ? <TicketListContainer tickets={event.tickets}/> : undefined }
             </div>
         )

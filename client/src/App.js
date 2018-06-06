@@ -11,11 +11,11 @@ class App extends Component {
     return (
       <AppContextProvider>
         <div className="App">
-          <h1>ReacTicket</h1>
+          <h1>Ticket Portal</h1>
+          <Cart />
           <SearchBar />
           <h2>Upcoming events</h2>
           <EventListContainer />
-          <Cart />
         </div>
       </AppContextProvider>
     );

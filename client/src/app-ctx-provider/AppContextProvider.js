@@ -15,7 +15,7 @@ class AppContextProvider extends React.Component {
                 // eslint-disable-next-line no-labels, no-unused-labels
                ticketsToBuy:  prevState.ticketsToBuy.filter(item => item !== ticket);
             });
-        }
+        },
     }
 
     render() {

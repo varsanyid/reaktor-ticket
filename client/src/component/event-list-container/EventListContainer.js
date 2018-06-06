@@ -1,18 +1,23 @@
 import React from 'react';
 import Event from '../event/Event';
 import './eventContainer.css';
+import { subscribeToNewEvents } from '../../service/SocketEventFactory';
 
 class EventListContainer extends React.Component {
         
     state = {
-        response: ''
-    };
+        eventList: ''
+    }
 
     componentDidMount() {
-        this.getEvents().then(res =>  {
-            this.setState({ response: res })
+        this.getEvents().then(response =>  {
+            this.setState({ eventList: response.events })
+        }).catch(err => console.log(err));
+        subscribeToNewEvents((event) => {
+            this.setState({
+                eventList: [...this.state.eventList, event]
+            })
         })
-        .catch(err => console.log(err));
     }
 
     getEvents = async () => {
@@ -25,10 +30,10 @@ class EventListContainer extends React.Component {
         return (
         <ul className="container">
             { 
-                this.state.response ? 
-                this.state.response.events.map(event => <Event key={event.id} event={event} />)
+                this.state.eventList ? 
+                this.state.eventList.map(event => <Event key={event.id} event={event} />)
                 : undefined
-            }    
+            }
         </ul>
         )
     }

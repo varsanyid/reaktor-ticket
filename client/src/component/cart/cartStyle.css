@@ -1,0 +1,6 @@
+.cart {
+    display:block;
+    right: 0;
+    border: 1px solid grey;
+    position: absolute;
+}

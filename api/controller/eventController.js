@@ -19,6 +19,10 @@ module.exports = {
     getEventById: (id) => {
         const index = eventList.events.findIndex(element => element.id === id);
         return eventList.events[index];
+    },
+
+    getEventsBySearchSnippet: (snippet) => {
+        return eventList.events.filter(element => element.name.includes(snippet));
     }
 
 }

@@ -8,7 +8,9 @@ class PurchaseButton extends React.Component {
         const ticket = this.props.ticket
         return (
             <TicketAppContext.Consumer>
-               { (context) => <button onClick={() => context.addTicketToCart(ticket)}>Add</button> }
+                { 
+                   context => <button onClick={() => context.addTicketToCart(ticket)}>Add</button> 
+                }
             </TicketAppContext.Consumer>
         )
     }
